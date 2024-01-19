@@ -8,9 +8,9 @@
 import Foundation
 
 extension String {
-    func convertDateStringToReadleDate() -> String {
+    func convertDateStringToReadableDate() -> String {
         let inputFormatter = DateFormatter()
-        inputFormatter.dateFormat = "yyy-MM-dd'T'HH:mm:ss.SSSZ"
+        inputFormatter.dateFormat = "yyyy-MM-dd'T'HH:mm:ss.SSSZ"
         
         if let date = inputFormatter.date(from: self) {
             let dateFormatter = DateFormatter()

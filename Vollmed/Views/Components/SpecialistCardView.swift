@@ -9,6 +9,8 @@ import SwiftUI
 
 struct SpecialistCardView: View {
     
+    var specialist: Specialist
+    
     let service = WebService()
     
     @State private var specialistImage: UIImage?
@@ -24,8 +26,6 @@ struct SpecialistCardView: View {
             print("Ocorreu um erro ao obter a imagem: \(error)")
         }
     }
-    
-    var specialist: Specialist
     
     var body: some View {
         VStack(alignment: .leading) {
@@ -49,7 +49,7 @@ struct SpecialistCardView: View {
             }
             
             NavigationLink {
-                ScheduleAppointmentView()
+                ScheduleAppointmentView(specialistID: specialist.id)
             } label: {
                 ButtonView(text: "Agendar consulta")
             }

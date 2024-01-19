@@ -1,0 +1,104 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Bucket
+   uuid = "91FEE423-874C-48D0-8F97-99154B15C04D"
+   type = "1"
+   version = "2.0">
+   <Breakpoints>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "154B66F9-7DB7-4C2A-B831-B5C5D189823D"
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "Vollmed/Views/ScheduleAppointmentView.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "25"
+            endingLineNumber = "25"
+            landmarkName = "scheduleAppointment()"
+            landmarkType = "7">
+            <Locations>
+               <Location
+                  uuid = "154B66F9-7DB7-4C2A-B831-B5C5D189823D - a44ee25f20114be7"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "(3) suspend resume partial function for Vollmed.ScheduleAppointmentView.scheduleAppointment() async -&gt; ()"
+                  moduleName = "Vollmed"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/quellenni.reis/Documents/Estudos/swiftui-vollmed/Vollmed/Views/ScheduleAppointmentView.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "21"
+                  endingLineNumber = "21"
+                  offsetFromSymbolStart = "248">
+               </Location>
+               <Location
+                  uuid = "154B66F9-7DB7-4C2A-B831-B5C5D189823D - a44ee25f20114b29"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "(3) suspend resume partial function for Vollmed.ScheduleAppointmentView.scheduleAppointment() async -&gt; ()"
+                  moduleName = "Vollmed"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/quellenni.reis/Documents/Estudos/swiftui-vollmed/Vollmed/Views/ScheduleAppointmentView.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "23"
+                  endingLineNumber = "23"
+                  offsetFromSymbolStart = "260">
+               </Location>
+            </Locations>
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "5F350C3D-0C3B-4504-ADC6-E187BDB0A5E3"
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "Vollmed/Views/ScheduleAppointmentView.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "32"
+            endingLineNumber = "32"
+            landmarkName = "scheduleAppointment()"
+            landmarkType = "7">
+            <Locations>
+               <Location
+                  uuid = "5F350C3D-0C3B-4504-ADC6-E187BDB0A5E3 - 72f80b30c5e2b6c"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "(4) suspend resume partial function for Vollmed.ScheduleAppointmentView.scheduleAppointment() async -&gt; ()"
+                  moduleName = "Vollmed"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/quellenni.reis/Documents/Estudos/swiftui-vollmed/Vollmed/Views/ScheduleAppointmentView.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "25"
+                  endingLineNumber = "25"
+                  offsetFromSymbolStart = "216">
+               </Location>
+               <Location
+                  uuid = "5F350C3D-0C3B-4504-ADC6-E187BDB0A5E3 - 72f80b30c5e2ac9"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "(4) suspend resume partial function for Vollmed.ScheduleAppointmentView.scheduleAppointment() async -&gt; ()"
+                  moduleName = "Vollmed"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/quellenni.reis/Documents/Estudos/swiftui-vollmed/Vollmed/Views/ScheduleAppointmentView.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "30"
+                  endingLineNumber = "30"
+                  offsetFromSymbolStart = "396">
+               </Location>
+            </Locations>
+         </BreakpointContent>
+      </BreakpointProxy>
+   </Breakpoints>
+</Bucket>
