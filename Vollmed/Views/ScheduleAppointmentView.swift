@@ -8,9 +8,9 @@
 import SwiftUI
 
 struct ScheduleAppointmentView: View {
-
+    
     @Environment(\.presentationMode) var presentationMode
-
+    
     let service = WebService()
     var specialistID: String
     var isRescheduleView: Bool
@@ -26,22 +26,34 @@ struct ScheduleAppointmentView: View {
         self.appointmentID = appointmentID
     }
     
-    func rescheduleAppointment() {
+    func rescheduleAppointment() async {
         guard let appointmentID else {
             print("Houve um erro ao obter o ID da consulta")
             return
         }
-        print(appointmentID)
+        do {
+            if let _ = try await
+                service.rescheduleAppointment(appointmentID: appointmentID, date: selectedDate.convertToString())
+            {
+                isAppointmentScheduled = true
+            } else {
+                isAppointmentScheduled = false
+            }
+        } catch {
+            print("Ocorreu um erro ao remarcar consulta: \(error)")
+            isAppointmentScheduled = false
+        }
+        showAlert = true
     }
     func scheduleAppointment() async {
         do {
             if let _ = try await
                 service.scheduleAppointment(specialistID: specialistID, patientID: patientID, date: selectedDate.convertToString()) {
-                    isAppointmentScheduled = true
+                isAppointmentScheduled = true
             } else {
                 isAppointmentScheduled = false
             }
-      
+            
         } catch {
             isAppointmentScheduled = false
             print("Ocorreu um erro ao agendar consulta: \(error)")
@@ -60,7 +72,7 @@ struct ScheduleAppointmentView: View {
             
             DatePicker("Escolha a data da consulta", selection: $selectedDate, in: Date.now...)
                 .datePickerStyle(.graphical)
-           
+            
             Button(action: {
                 Task {
                     if isRescheduleView {
@@ -77,15 +89,15 @@ struct ScheduleAppointmentView: View {
         .navigationTitle(isRescheduleView ? "Reagendar consulta" : "Agendar consulta")
         .navigationBarTitleDisplayMode(.large)
         .onAppear {
-                   UIDatePicker.appearance().minuteInterval = 15
-               }
+            UIDatePicker.appearance().minuteInterval = 15
+        }
         .alert(isAppointmentScheduled ? "Sucesso" : "Ops, algo deu errado!", isPresented: $showAlert, presenting: isAppointmentScheduled) { _ in
             Button(action: {
                 presentationMode.wrappedValue.dismiss()
             }, label: {
                 Text("Ok")
             })
-
+            
         } message: { isSchedule in
             if isSchedule {
                 Text("A consulta foi \(isRescheduleView ? "reagendada" : "agendada") com sucesso!")
