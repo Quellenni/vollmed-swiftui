@@ -14,20 +14,20 @@ struct WebService {
     private let baseURL = "http://localhost:3000"
     
     func cancelAppointment(appointmentID: String, reasonToCancel: String) async throws -> Bool {
-        let endpoint = baseURL + "/consulta" + appointmentID
+        let endpoint = baseURL + "/consulta/" + appointmentID
         
         guard let url = URL(string: endpoint) else {
             print("Erro na URL!")
             return false
         }
         
-        let requestData: [String: String] = ["motivo cancelamento" : reasonToCancel]
+        let requestData: [String: String] = ["motivoCancelamento" : reasonToCancel]
         
         let jsonData = try JSONSerialization.data(withJSONObject: requestData)
         
         var request = URLRequest(url: url)
         request.httpMethod = "DELETE"
-        request.addValue("application/json", forHTTPHeaderField: "Content-Type")
+        request.setValue("application/json", forHTTPHeaderField: "Content-Type")
         request.httpBody = jsonData
         
         let(_, response) = try await URLSession.shared.data(for: request)

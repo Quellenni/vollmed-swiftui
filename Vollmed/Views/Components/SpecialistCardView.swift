@@ -22,7 +22,6 @@ struct SpecialistCardView: View {
                                                             specialist.imageUrl) {
                 self.specialistImage = image
             }
-            
         } catch {
             print("Ocorreu um erro ao obter a imagem: \(error)")
         }
@@ -55,7 +54,6 @@ struct SpecialistCardView: View {
             
             if let appointment {
                 HStack {
-                    
                     NavigationLink {
                         ScheduleAppointmentView(specialistID: appointment.specialist.id,
                                                 isRescheduleView: true, appointmentID: appointment.id)

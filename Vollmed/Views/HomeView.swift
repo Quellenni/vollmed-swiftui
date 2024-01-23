@@ -53,7 +53,7 @@ struct HomeView: View {
         .padding(.top)
         .onAppear {
             Task {
-              await getSpecialists()
+                await getSpecialists()
             }
         }
     }

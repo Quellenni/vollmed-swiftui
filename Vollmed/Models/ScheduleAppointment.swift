@@ -14,7 +14,7 @@ struct ScheduleAppointmentResponse: Codable, Identifiable {
     let date: String
     let reasonToCancel: String?
     
-    enum CondinKeys: String, CodingKey {
+    enum CondingKeys: String, CodingKey {
         case id
         case specialist = "especialista"
         case patient = "paciente"

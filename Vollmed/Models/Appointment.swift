@@ -17,5 +17,4 @@ struct Appointment: Identifiable, Codable {
         case date = "data"
         case specialist = "especialista"
     }
-    
 }

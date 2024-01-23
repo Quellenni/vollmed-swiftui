@@ -14,7 +14,7 @@ struct CancelappointmentView: View {
     
     @State private var reasonToCancel = ""
     @State private var showAlert = false
-    @State private var isAppontementCancelled = false
+    @State private var isAppontmentCancelled = false
     
     func cancelAppointment() async {
         do {
@@ -24,7 +24,7 @@ struct CancelappointmentView: View {
             }
         } catch {
             print("Ocorreu um erro ao desmarcar a consulta: \(error)")
-            isAppontementCancelled = false
+            isAppontmentCancelled = false
         }
         showAlert = true
         
@@ -59,13 +59,13 @@ struct CancelappointmentView: View {
         .padding()
         .navigationTitle("Cancelar consulta")
         .navigationBarTitleDisplayMode(.large)
-        .alert(isAppontementCancelled ? "Sucesso!" : "Ops, algo deu errado!", isPresented: $showAlert, presenting: isAppontementCancelled) { _ in
+        .alert(isAppontmentCancelled ? "Sucesso!" : "Ops, algo deu errado!", isPresented: $showAlert, presenting: isAppontmentCancelled) { _ in
             Button("OK", action: {})
         } message: { isCancelled in
             if isCancelled {
-                Text("A consulta foi cancelada com sucesso")
+                Text("A consulta foi cancelada com sucesso.")
             } else {
-                Text("Houve um erro ao cancelar a consulta. Por favor tente novamente ou entre em contato via telefone")
+                Text("Houve um erro ao cancelar a consulta. Por favor tente novamente ou entre em contato via telefone.")
             }
         }
     }
